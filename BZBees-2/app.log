@@ -1,607 +1,841 @@
-<<<<<<< AddMySql
-2020-11-17 07:31:42.659  WARN 7368 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8h32m36s955ms587µs).
-2020-11-17 09:08:13.920  INFO 9244 --- [main] c.b.h.dao.UserRepositoryIntegrationTest  : Starting UserRepositoryIntegrationTest on DESKTOP-626N0R4 with PID 9244 (started by rober in C:\Users\rober\git\Apx\BZBees\BZBees-2)
-2020-11-17 09:08:13.921 DEBUG 9244 --- [main] c.b.h.dao.UserRepositoryIntegrationTest  : Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
-2020-11-17 09:08:13.921  INFO 9244 --- [main] c.b.h.dao.UserRepositoryIntegrationTest  : The following profiles are active: test
-2020-11-17 09:08:14.559  INFO 9244 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-11-17 09:08:14.659  INFO 9244 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 89ms. Found 7 JPA repository interfaces.
-2020-11-17 09:08:14.714  INFO 9244 --- [main] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
-2020-11-17 09:08:14.954  INFO 9244 --- [main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:040488c0-a506-471b-8c71-bf71b45bea07;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
-2020-11-17 09:08:15.347  INFO 9244 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-11-17 09:08:15.429  INFO 9244 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.15.Final
-2020-11-17 09:08:15.618  INFO 9244 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-11-17 09:08:15.774  INFO 9244 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2020-11-17 09:08:16.737  INFO 9244 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-11-17 09:08:16.744  INFO 9244 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-11-17 09:08:17.332  INFO 9244 --- [main] c.b.h.dao.UserRepositoryIntegrationTest  : Started UserRepositoryIntegrationTest in 3.788 seconds (JVM running for 5.308)
-2020-11-17 09:08:17.356  INFO 9244 --- [main] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@51c693d testClass = UserRepositoryIntegrationTest, testInstance = com.bzbees.hrma.dao.UserRepositoryIntegrationTest@6c61a903, testMethod = ifNewUserSavedThenSuccess@UserRepositoryIntegrationTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6a57ae10 testClass = UserRepositoryIntegrationTest, locations = '{}', classes = '{class com.bzbess.hrma.BzBees1Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@766653e6 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@53fdffa1, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@4d0f2471, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@1e04fa0a, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@36acacc0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@71a8adcf, org.springframework.boot.test.context.SpringBootTestArgs@1], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@66456506]; rollback [true]
-2020-11-17 09:08:17.373  WARN 9244 --- [main] o.s.test.context.TestContextManager      : Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@183ec003] for test method [public void com.bzbees.hrma.dao.UserRepositoryIntegrationTest.ifNewUserSavedThenSuccess()] and test instance [com.bzbees.hrma.dao.UserRepositoryIntegrationTest@6c61a903]
+2020-11-20 08:34:15.053  WARN 11780 --- [HikariPool-8 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Thread starvation or clock leap detected (housekeeper delta=9h21m2s430ms149µs800ns).
+2020-11-20 10:21:05.358  WARN 11780 --- [HikariPool-8 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Thread starvation or clock leap detected (housekeeper delta=40m49s326ms875µs800ns).
+2020-11-20 12:22:22.749  INFO 11780 --- [Thread-38] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-20 12:22:22.752  INFO 11780 --- [Thread-38] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 12:22:23.751  INFO 11780 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-20 12:22:23.779  INFO 11780 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27ms. Found 7 JPA repository interfaces.
+2020-11-20 12:22:23.941  INFO 11780 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-20 12:22:23.990  INFO 11780 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1034 ms
+2020-11-20 12:22:24.174  INFO 11780 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://176.223.122.51:3306/bpeople_BZBees'
+2020-11-20 12:22:24.413  INFO 11780 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 12:22:24.654  WARN 11780 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-20 12:22:24.686  INFO 11780 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-20 12:22:24.887  INFO 11780 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-20 12:22:24.891  INFO 11780 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-11-20 12:22:24.920  INFO 11780 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-20 12:22:24.924  INFO 11780 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-11-20 12:29:37.880  INFO 11780 --- [Thread-43] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-20 12:29:37.883  INFO 11780 --- [Thread-43] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 12:29:38.531  INFO 11780 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-20 12:29:38.600  INFO 11780 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69ms. Found 7 JPA repository interfaces.
+2020-11-20 12:29:38.822  INFO 11780 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-20 12:29:38.859  INFO 11780 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 846 ms
+2020-11-20 12:29:39.055  INFO 11780 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://176.223.122.51:3306/bpeople_BZBees'
+2020-11-20 12:29:39.287  INFO 11780 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 12:29:39.540  WARN 11780 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-20 12:29:39.569  INFO 11780 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-20 12:29:39.747  INFO 11780 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-20 12:29:39.751  INFO 11780 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-11-20 12:29:39.796  INFO 11780 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-20 12:29:39.803  INFO 11780 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-11-20 12:34:41.270  INFO 11780 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-20 12:34:41.282  INFO 11780 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2020-11-20 12:38:32.826  INFO 11780 --- [Thread-48] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-20 12:38:32.829  INFO 11780 --- [Thread-48] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 12:38:34.025  INFO 11780 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-20 12:38:34.085  INFO 11780 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60ms. Found 7 JPA repository interfaces.
+2020-11-20 12:38:34.459  INFO 11780 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-20 12:38:34.578  INFO 11780 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1460 ms
+2020-11-20 12:38:34.827  INFO 11780 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://176.223.122.51:3306/bpeople_BZBees'
+2020-11-20 12:38:35.354  INFO 11780 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 12:38:36.004  WARN 11780 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-20 12:38:36.071  INFO 11780 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-20 12:38:36.448  INFO 11780 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-20 12:38:36.452  INFO 11780 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-11-20 12:38:36.509  INFO 11780 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-20 12:38:36.518  INFO 11780 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-11-20 12:42:23.000  INFO 11780 --- [Thread-53] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-20 12:42:23.005  INFO 11780 --- [Thread-53] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 12:46:16.216  INFO 2600 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-11-20 12:46:16.218  INFO 2600 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-11-20 12:46:17.070  INFO 2600 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-20 12:46:17.138  INFO 2600 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60ms. Found 7 JPA repository interfaces.
+2020-11-20 12:46:17.844  INFO 2600 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-20 12:46:17.939  INFO 2600 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1720 ms
+2020-11-20 12:46:18.401  INFO 2600 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://176.223.122.51:3306/bpeople_BZBees'
+2020-11-20 12:46:19.788  INFO 2600 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 12:46:20.554  WARN 2600 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-20 12:46:20.695  INFO 2600 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-20 12:46:21.273  INFO 2600 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-20 12:46:21.283  INFO 2600 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-11-20 12:46:21.367  INFO 2600 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-20 12:46:23.875  INFO 2600 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-20 12:46:23.893  INFO 2600 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
+2020-11-20 12:46:53.904  INFO 2600 --- [Thread-5] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-20 12:46:53.910  INFO 2600 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 12:47:10.634  INFO 2600 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-20 12:47:10.634  INFO 2600 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0ms. Found 0 JPA repository interfaces.
+2020-11-20 12:47:10.737  INFO 2600 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-20 12:47:10.765  INFO 2600 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 446 ms
+2020-11-20 12:47:11.189  INFO 2600 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://176.223.122.51:3306/bpeople_BZBees'
+2020-11-20 12:47:11.305  INFO 2600 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 12:47:11.307  WARN 2600 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'bzBees1Application': Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.bzbess.hrma.BzBees1Application] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418]
+2020-11-20 12:47:11.307  INFO 2600 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 12:47:11.461  INFO 2600 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
 
-org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [schema.sql]; nested exception is java.io.FileNotFoundException: class path resource [schema.sql] cannot be opened because it does not exist
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:581) ~[spring-jdbc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:49) ~[spring-jdbc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.execute(ResourceDatabasePopulator.java:269) ~[spring-jdbc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener.lambda$executeSqlScripts$4(SqlScriptsTestExecutionListener.java:263) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.transaction.support.TransactionOperations.lambda$executeWithoutResult$0(TransactionOperations.java:68) ~[spring-tx-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) ~[spring-tx-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.transaction.support.TransactionOperations.executeWithoutResult(TransactionOperations.java:67) ~[spring-tx-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener.executeSqlScripts(SqlScriptsTestExecutionListener.java:263) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener.lambda$executeSqlScripts$0(SqlScriptsTestExecutionListener.java:185) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
-	at org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener.executeSqlScripts(SqlScriptsTestExecutionListener.java:185) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener.executeSqlScripts(SqlScriptsTestExecutionListener.java:147) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener.beforeTestMethod(SqlScriptsTestExecutionListener.java:117) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:289) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366) ~[org.junit_4.13.0.v20200204-1500.jar:4.13]
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331) ~[org.junit_4.13.0.v20200204-1500.jar:4.13]
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79) ~[org.junit_4.13.0.v20200204-1500.jar:4.13]
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329) ~[org.junit_4.13.0.v20200204-1500.jar:4.13]
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66) ~[org.junit_4.13.0.v20200204-1500.jar:4.13]
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293) ~[org.junit_4.13.0.v20200204-1500.jar:4.13]
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[org.junit_4.13.0.v20200204-1500.jar:4.13]
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413) ~[org.junit_4.13.0.v20200204-1500.jar:4.13]
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[org.junit_4.13.0.v20200204-1500.jar:4.13]
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115) ~[org.junit_4.13.0.v20200204-1500.jar:4.13]
-	at org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:40) ~[junit-vintage-engine-5.5.2.jar:5.5.2]
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195) ~[na:na]
-	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133) ~[na:na]
-	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474) ~[na:na]
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) ~[na:na]
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497) ~[na:na]
-	at org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:80) ~[junit-vintage-engine-5.5.2.jar:5.5.2]
-	at org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:71) ~[junit-vintage-engine-5.5.2.jar:5.5.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:137) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
-	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:98) ~[.cp/:na]
-	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41) ~[.cp/:na]
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542) ~[.cp/:na]
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770) ~[.cp/:na]
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464) ~[.cp/:na]
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210) ~[.cp/:na]
-Caused by: java.io.FileNotFoundException: class path resource [schema.sql] cannot be opened because it does not exist
-	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:180) ~[spring-core-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.core.io.support.EncodedResource.getReader(EncodedResource.java:146) ~[spring-core-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.jdbc.datasource.init.ScriptUtils.readScript(ScriptUtils.java:328) ~[spring-jdbc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:578) ~[spring-jdbc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	... 56 common frames omitted
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-11-20 12:47:11.463 ERROR 2600 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
 
-2020-11-17 09:08:17.553  WARN 9244 --- [main] o.s.test.context.TestContextManager      : Caught exception while invoking 'afterTestMethod' callback on TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@183ec003] for test method [public void com.bzbees.hrma.dao.UserRepositoryIntegrationTest.ifNewUserSavedThenSuccess()] and test instance [com.bzbees.hrma.dao.UserRepositoryIntegrationTest@6c61a903]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'bzBees1Application': Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.bzbess.hrma.BzBees1Application] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:572) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:895) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) ~[spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at com.bzbess.hrma.BzBees1Application.main(BzBees1Application.java:19) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.bzbess.hrma.BzBees1Application] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:734) ~[spring-core-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithLocalFields(ReflectionUtils.java:666) ~[spring-core-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.buildPersistenceMetadata(PersistenceAnnotationBeanPostProcessor.java:428) ~[spring-orm-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.findPersistenceMetadata(PersistenceAnnotationBeanPostProcessor.java:409) ~[spring-orm-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(PersistenceAnnotationBeanPostProcessor.java:336) ~[spring-orm-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1094) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	... 20 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: Lcom/bzbess/hrma/services/UserService;
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3139) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2262) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:729) ~[spring-core-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	... 26 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.bzbess.hrma.services.UserService
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:602) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522) ~[na:na]
+	... 30 common frames omitted
 
-org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [drop.sql]; nested exception is java.io.FileNotFoundException: class path resource [drop.sql] cannot be opened because it does not exist
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:581) ~[spring-jdbc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:49) ~[spring-jdbc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.execute(ResourceDatabasePopulator.java:269) ~[spring-jdbc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener.lambda$executeSqlScripts$4(SqlScriptsTestExecutionListener.java:263) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.transaction.support.TransactionOperations.lambda$executeWithoutResult$0(TransactionOperations.java:68) ~[spring-tx-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) ~[spring-tx-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.transaction.support.TransactionOperations.executeWithoutResult(TransactionOperations.java:67) ~[spring-tx-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener.executeSqlScripts(SqlScriptsTestExecutionListener.java:263) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener.lambda$executeSqlScripts$0(SqlScriptsTestExecutionListener.java:185) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
-	at org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener.executeSqlScripts(SqlScriptsTestExecutionListener.java:185) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener.executeSqlScripts(SqlScriptsTestExecutionListener.java:147) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener.afterTestMethod(SqlScriptsTestExecutionListener.java:126) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.test.context.TestContextManager.afterTestMethod(TestContextManager.java:441) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:94) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366) ~[org.junit_4.13.0.v20200204-1500.jar:4.13]
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331) ~[org.junit_4.13.0.v20200204-1500.jar:4.13]
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79) ~[org.junit_4.13.0.v20200204-1500.jar:4.13]
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329) ~[org.junit_4.13.0.v20200204-1500.jar:4.13]
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66) ~[org.junit_4.13.0.v20200204-1500.jar:4.13]
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293) ~[org.junit_4.13.0.v20200204-1500.jar:4.13]
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[org.junit_4.13.0.v20200204-1500.jar:4.13]
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413) ~[org.junit_4.13.0.v20200204-1500.jar:4.13]
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[org.junit_4.13.0.v20200204-1500.jar:4.13]
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115) ~[org.junit_4.13.0.v20200204-1500.jar:4.13]
-	at org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:40) ~[junit-vintage-engine-5.5.2.jar:5.5.2]
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195) ~[na:na]
-	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133) ~[na:na]
-	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474) ~[na:na]
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) ~[na:na]
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497) ~[na:na]
-	at org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:80) ~[junit-vintage-engine-5.5.2.jar:5.5.2]
-	at org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:71) ~[junit-vintage-engine-5.5.2.jar:5.5.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:137) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
-	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:98) ~[.cp/:na]
-	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41) ~[.cp/:na]
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542) ~[.cp/:na]
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770) ~[.cp/:na]
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464) ~[.cp/:na]
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210) ~[.cp/:na]
-Caused by: java.io.FileNotFoundException: class path resource [drop.sql] cannot be opened because it does not exist
-	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:180) ~[spring-core-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.core.io.support.EncodedResource.getReader(EncodedResource.java:146) ~[spring-core-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.jdbc.datasource.init.ScriptUtils.readScript(ScriptUtils.java:328) ~[spring-jdbc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:578) ~[spring-jdbc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	... 55 common frames omitted
+2020-11-20 12:48:13.725  INFO 2600 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-20 12:48:13.751  INFO 2600 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25ms. Found 7 JPA repository interfaces.
+2020-11-20 12:48:13.871  INFO 2600 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-20 12:48:13.898  INFO 2600 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 598 ms
+2020-11-20 12:48:14.074  INFO 2600 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://176.223.122.51:3306/bpeople_BZBees'
+2020-11-20 12:48:14.277  INFO 2600 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 12:48:14.506  WARN 2600 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-20 12:48:14.539  INFO 2600 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-20 12:48:14.787  INFO 2600 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-20 12:48:14.790  INFO 2600 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-11-20 12:48:14.828  INFO 2600 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-20 12:48:14.833  INFO 2600 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-11-20 12:48:31.964  INFO 2600 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-20 12:48:31.967  INFO 2600 --- [Thread-8] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 12:48:32.388  INFO 2600 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-20 12:48:32.408  INFO 2600 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19ms. Found 7 JPA repository interfaces.
+2020-11-20 12:48:32.518  INFO 2600 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-20 12:48:32.545  INFO 2600 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 468 ms
+2020-11-20 12:48:32.725  INFO 2600 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://176.223.122.51:3306/bpeople_BZBees'
+2020-11-20 12:48:32.911  INFO 2600 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 12:48:33.108  WARN 2600 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-20 12:48:33.133  INFO 2600 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-20 12:48:33.292  INFO 2600 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-20 12:48:33.294  INFO 2600 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-11-20 12:48:33.318  INFO 2600 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-20 12:48:33.321  INFO 2600 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-11-20 12:48:35.997  INFO 2600 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-20 12:48:36.001  INFO 2600 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2020-11-20 13:36:59.772  INFO 2600 --- [Thread-20] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-20 13:36:59.775  INFO 2600 --- [Thread-20] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 13:37:00.245  INFO 2600 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-20 13:37:00.267  INFO 2600 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20ms. Found 7 JPA repository interfaces.
+2020-11-20 13:37:00.387  INFO 2600 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-20 13:37:00.411  INFO 2600 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 505 ms
+2020-11-20 13:37:00.583  INFO 2600 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://176.223.122.51:3306/bpeople_BZBees'
+2020-11-20 13:37:00.766  INFO 2600 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 13:37:00.969  WARN 2600 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-20 13:37:00.994  INFO 2600 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-20 13:37:01.149  INFO 2600 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-20 13:37:01.152  INFO 2600 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-11-20 13:37:01.181  INFO 2600 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-20 13:37:01.184  INFO 2600 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-11-20 13:37:59.821  INFO 2600 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-20 13:37:59.826  INFO 2600 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2020-11-20 13:38:48.603  INFO 2600 --- [Thread-25] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-20 13:38:48.604  INFO 2600 --- [Thread-25] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 13:38:49.147  INFO 2600 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-20 13:38:49.167  INFO 2600 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19ms. Found 7 JPA repository interfaces.
+2020-11-20 13:38:49.271  INFO 2600 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-20 13:38:49.293  INFO 2600 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 532 ms
+2020-11-20 13:38:49.462  INFO 2600 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://176.223.122.51:3306/bpeople_BZBees'
+2020-11-20 13:38:49.654  INFO 2600 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 13:38:49.660  WARN 2600 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bzBees1Application': Unsatisfied dependency expressed through field 'userServ'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.bzbess.hrma.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-11-20 13:38:49.660  INFO 2600 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 13:38:49.689  INFO 2600 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
 
-2020-11-17 09:08:17.557  INFO 9244 --- [main] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@51c693d testClass = UserRepositoryIntegrationTest, testInstance = com.bzbees.hrma.dao.UserRepositoryIntegrationTest@6c61a903, testMethod = ifNewUserSavedThenSuccess@UserRepositoryIntegrationTest, testException = org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [schema.sql]; nested exception is java.io.FileNotFoundException: class path resource [schema.sql] cannot be opened because it does not exist, mergedContextConfiguration = [MergedContextConfiguration@6a57ae10 testClass = UserRepositoryIntegrationTest, locations = '{}', classes = '{class com.bzbess.hrma.BzBees1Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@766653e6 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@53fdffa1, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@4d0f2471, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@1e04fa0a, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@36acacc0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@71a8adcf, org.springframework.boot.test.context.SpringBootTestArgs@1], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]
-2020-11-17 09:08:17.610  INFO 9244 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2020-11-17 09:08:17.611  INFO 9244 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-=======
-2020-10-28 16:00:24.454  INFO 13412 --- [restartedMain] com.bzbess.hrma.BzBees1Application       : Starting BzBees1Application on DESKTOP-626N0R4 with PID 13412 (E:\Programing\SeleniumExpress\BZBees-1\target\classes started by rober in E:\Programing\SeleniumExpress\BZBees-1)
-2020-10-28 16:00:24.461  INFO 13412 --- [restartedMain] com.bzbess.hrma.BzBees1Application       : The following profiles are active: test
-2020-10-28 16:00:24.520  INFO 13412 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-10-28 16:00:24.520  INFO 13412 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-10-28 16:00:25.426  INFO 13412 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-10-28 16:00:25.494  INFO 13412 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61ms. Found 7 JPA repository interfaces.
-2020-10-28 16:00:26.081  INFO 13412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-10-28 16:00:26.090  INFO 13412 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-10-28 16:00:26.090  INFO 13412 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
-2020-10-28 16:00:26.177  INFO 13412 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-10-28 16:00:26.177  INFO 13412 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1657 ms
-2020-10-28 16:00:26.363  INFO 13412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-10-28 16:00:26.488  INFO 13412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-10-28 16:00:26.494  INFO 13412 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2020-10-28 16:00:26.946  INFO 13412 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-10-28 16:00:27.004  INFO 13412 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.15.Final
-2020-10-28 16:00:27.137  INFO 13412 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-10-28 16:00:27.247  INFO 13412 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2020-10-28 16:00:27.949  INFO 13412 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-10-28 16:00:27.953  INFO 13412 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-10-28 16:00:27.998  INFO 13412 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-10-28 16:00:28.642  WARN 13412 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-10-28 16:00:28.763  INFO 13412 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-10-28 16:00:29.249  INFO 13412 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2020-10-28 16:00:29.330  INFO 13412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-10-28 16:00:29.333  INFO 13412 --- [restartedMain] com.bzbess.hrma.BzBees1Application       : Started BzBees1Application in 5.189 seconds (JVM running for 6.063)
-2020-10-28 16:00:30.587  INFO 13412 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-10-28 16:00:30.588  INFO 13412 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-10-28 16:00:30.601  INFO 13412 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
-2020-10-28 16:25:57.527 ERROR 13412 --- [http-nio-8080-exec-4] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-4] Exception processing template "user/registercom.bzbess.hrma.entities.Person@79b067be": Error resolving template [user/registercom.bzbess.hrma.entities.Person@79b067be], template might not exist or might not be accessible by any of the configured Template Resolvers
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-11-20 13:38:49.856 ERROR 2600 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
 
-org.thymeleaf.exceptions.TemplateInputException: Error resolving template [user/registercom.bzbess.hrma.entities.Person@79b067be], template might not exist or might not be accessible by any of the configured Template Resolvers
-	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:109) ~[spring-boot-actuator-2.2.7.RELEASE.jar:2.2.7.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+***************************
+APPLICATION FAILED TO START
+***************************
 
-2020-10-28 16:25:57.530 ERROR 13412 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: Error resolving template [user/registercom.bzbess.hrma.entities.Person@79b067be], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
+Description:
 
-org.thymeleaf.exceptions.TemplateInputException: Error resolving template [user/registercom.bzbess.hrma.entities.Person@79b067be], template might not exist or might not be accessible by any of the configured Template Resolvers
-	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:109) ~[spring-boot-actuator-2.2.7.RELEASE.jar:2.2.7.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Field userServ in com.bzbess.hrma.BzBees1Application required a bean of type 'com.bzbess.hrma.services.UserService' that could not be found.
 
-2020-10-28 16:26:23.401 ERROR 13412 --- [http-nio-8080-exec-3] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-3] Exception processing template "user/registercom.bzbess.hrma.entities.Person@79b067be": Error resolving template [user/registercom.bzbess.hrma.entities.Person@79b067be], template might not exist or might not be accessible by any of the configured Template Resolvers
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
 
-org.thymeleaf.exceptions.TemplateInputException: Error resolving template [user/registercom.bzbess.hrma.entities.Person@79b067be], template might not exist or might not be accessible by any of the configured Template Resolvers
-	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:109) ~[spring-boot-actuator-2.2.7.RELEASE.jar:2.2.7.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
 
-2020-10-28 16:26:23.403 ERROR 13412 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: Error resolving template [user/registercom.bzbess.hrma.entities.Person@79b067be], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
+Action:
 
-org.thymeleaf.exceptions.TemplateInputException: Error resolving template [user/registercom.bzbess.hrma.entities.Person@79b067be], template might not exist or might not be accessible by any of the configured Template Resolvers
-	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:109) ~[spring-boot-actuator-2.2.7.RELEASE.jar:2.2.7.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Consider defining a bean of type 'com.bzbess.hrma.services.UserService' in your configuration.
 
-2020-10-28 16:29:13.568 ERROR 13412 --- [http-nio-8080-exec-3] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-3] Exception processing template "user/registercom.bzbess.hrma.entities.Person@79b067be": Error resolving template [user/registercom.bzbess.hrma.entities.Person@79b067be], template might not exist or might not be accessible by any of the configured Template Resolvers
+2020-11-20 13:39:44.321  INFO 2600 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-20 13:39:44.342  INFO 2600 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21ms. Found 7 JPA repository interfaces.
+2020-11-20 13:39:44.450  INFO 2600 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-20 13:39:44.471  INFO 2600 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 460 ms
+2020-11-20 13:39:44.648  INFO 2600 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://176.223.122.51:3306/bpeople_BZBees'
+2020-11-20 13:39:44.842  INFO 2600 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 13:39:44.845  WARN 2600 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bzBees1Application': Unsatisfied dependency expressed through field 'userServ'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.bzbess.hrma.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-11-20 13:39:44.845  INFO 2600 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 13:39:44.889  INFO 2600 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
 
-org.thymeleaf.exceptions.TemplateInputException: Error resolving template [user/registercom.bzbess.hrma.entities.Person@79b067be], template might not exist or might not be accessible by any of the configured Template Resolvers
-	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:109) ~[spring-boot-actuator-2.2.7.RELEASE.jar:2.2.7.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-11-20 13:39:44.988 ERROR 2600 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
 
-2020-10-28 16:29:13.570 ERROR 13412 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: Error resolving template [user/registercom.bzbess.hrma.entities.Person@79b067be], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
+***************************
+APPLICATION FAILED TO START
+***************************
 
-org.thymeleaf.exceptions.TemplateInputException: Error resolving template [user/registercom.bzbess.hrma.entities.Person@79b067be], template might not exist or might not be accessible by any of the configured Template Resolvers
-	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:109) ~[spring-boot-actuator-2.2.7.RELEASE.jar:2.2.7.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Description:
 
-2020-11-04 22:27:37.010  INFO 15952 --- [restartedMain] com.bzbess.hrma.BzBees1Application       : Starting BzBees1Application on DESKTOP-626N0R4 with PID 15952 (C:\Users\rober\git\Apx\BZBees\BZBees-2\target\classes started by rober in C:\Users\rober\git\Apx\BZBees\BZBees-2)
-2020-11-04 22:27:37.013  INFO 15952 --- [restartedMain] com.bzbess.hrma.BzBees1Application       : The following profiles are active: test
-2020-11-04 22:27:37.049  INFO 15952 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-11-04 22:27:37.049  INFO 15952 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-11-04 22:27:37.863  INFO 15952 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-11-04 22:27:37.932  INFO 15952 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62ms. Found 7 JPA repository interfaces.
-2020-11-04 22:27:38.469  INFO 15952 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-11-04 22:27:38.475  INFO 15952 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-11-04 22:27:38.476  INFO 15952 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
-2020-11-04 22:27:38.559  INFO 15952 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-11-04 22:27:38.559  INFO 15952 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1509 ms
-2020-11-04 22:27:38.732  INFO 15952 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-11-04 22:27:38.808  INFO 15952 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-11-04 22:27:38.813  INFO 15952 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2020-11-04 22:27:39.211  INFO 15952 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-11-04 22:27:39.242  INFO 15952 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.15.Final
-2020-11-04 22:27:39.334  INFO 15952 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-11-04 22:27:39.412  INFO 15952 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2020-11-04 22:27:40.044  INFO 15952 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-11-04 22:27:40.049  INFO 15952 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-11-04 22:27:40.093  INFO 15952 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-11-04 22:27:40.725  WARN 15952 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-11-04 22:27:40.846  INFO 15952 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-11-04 22:27:41.332  INFO 15952 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2020-11-04 22:27:41.399  INFO 15952 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-11-04 22:27:41.402  INFO 15952 --- [restartedMain] com.bzbess.hrma.BzBees1Application       : Started BzBees1Application in 4.639 seconds (JVM running for 5.204)
-2020-11-04 22:27:44.201  INFO 15952 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-11-04 22:27:44.202  INFO 15952 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-11-04 22:27:44.215  INFO 15952 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
->>>>>>> 3b8836f Commit MySQL run from bpeople.ro
-2020-11-17 09:18:21.903  INFO 7368 --- [Thread-5] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-11-17 09:18:21.905  INFO 7368 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2020-11-17 09:18:21.906  INFO 7368 --- [Thread-5] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2020-11-17 09:18:22.138  WARN 7368 --- [Thread-5] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
-2020-11-17 09:18:22.139  INFO 7368 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-11-17 09:18:22.140  INFO 7368 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2020-11-17 09:18:22.270  INFO 7368 --- [restartedMain] com.bzbess.hrma.BzBees1Application       : Starting BzBees1Application on DESKTOP-626N0R4 with PID 7368 (C:\Users\rober\git\Apx\BZBees\BZBees-2\target\classes started by rober in C:\Users\rober\git\Apx\BZBees\BZBees-2)
-2020-11-17 09:18:22.270  INFO 7368 --- [restartedMain] com.bzbess.hrma.BzBees1Application       : The following profiles are active: dev
-2020-11-17 09:18:22.646  INFO 7368 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-11-17 09:18:22.669  INFO 7368 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22ms. Found 7 JPA repository interfaces.
-2020-11-17 09:18:22.813  INFO 7368 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-11-17 09:18:22.814  INFO 7368 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-11-17 09:18:22.814  INFO 7368 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
-2020-11-17 09:18:22.838  INFO 7368 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-11-17 09:18:22.838  INFO 7368 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 565 ms
-2020-11-17 09:18:22.876  INFO 7368 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2020-11-17 09:18:23.148  INFO 7368 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2020-11-17 09:18:23.149  INFO 7368 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://176.223.122.51:3306/bpeople_BZBees'
-2020-11-17 09:18:23.253  INFO 7368 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-11-17 09:18:23.263  INFO 7368 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
-2020-11-17 09:18:23.405  INFO 7368 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-11-17 09:18:23.405  INFO 7368 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-11-17 09:18:23.619  WARN 7368 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-11-17 09:18:23.646  INFO 7368 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-11-17 09:18:23.807  INFO 7368 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-11-17 09:18:23.810  INFO 7368 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2020-11-17 09:18:23.843  INFO 7368 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-11-17 09:18:23.844  INFO 7368 --- [restartedMain] com.bzbess.hrma.BzBees1Application       : Started BzBees1Application in 1.611 seconds (JVM running for 39711.55)
-2020-11-17 09:18:23.846  INFO 7368 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2020-11-17 09:50:06.739  INFO 9764 --- [restartedMain] com.bzbess.hrma.BzBees1Application       : Starting BzBees1Application on DESKTOP-626N0R4 with PID 9764 (E:\BeePeopleApp\BZBees-0947\BZBees-main\BZBees-main\BZBees-2\target\classes started by rober in E:\BeePeopleApp\BZBees-0947\BZBees-main\BZBees-main\BZBees-2)
-2020-11-17 09:50:06.741  INFO 9764 --- [restartedMain] com.bzbess.hrma.BzBees1Application       : The following profiles are active: dev
-2020-11-17 09:50:06.778  INFO 9764 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-11-17 09:50:06.778  INFO 9764 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-11-17 09:50:07.553  INFO 9764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-11-17 09:50:07.614  INFO 9764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55ms. Found 7 JPA repository interfaces.
-2020-11-17 09:50:08.157  INFO 9764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-11-17 09:50:08.164  INFO 9764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-11-17 09:50:08.164  INFO 9764 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
-2020-11-17 09:50:08.252  INFO 9764 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-11-17 09:50:08.252  INFO 9764 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1474 ms
-2020-11-17 09:50:08.428  INFO 9764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-11-17 09:50:08.683  INFO 9764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-11-17 09:50:08.693  INFO 9764 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://176.223.122.51:3306/bpeople_BZBees'
-2020-11-17 09:50:09.094  INFO 9764 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-11-17 09:50:09.124  INFO 9764 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.15.Final
-2020-11-17 09:50:09.216  INFO 9764 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-11-17 09:50:09.306  INFO 9764 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
-2020-11-17 09:50:09.882  INFO 9764 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-11-17 09:50:09.887  INFO 9764 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-11-17 09:50:10.513  WARN 9764 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-11-17 09:50:10.631  INFO 9764 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-11-17 09:50:11.108  INFO 9764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-11-17 09:50:11.115  INFO 9764 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2020-11-17 09:50:11.185  INFO 9764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-11-17 09:50:11.187  INFO 9764 --- [restartedMain] com.bzbess.hrma.BzBees1Application       : Started BzBees1Application in 4.68 seconds (JVM running for 5.255)
-2020-11-17 09:50:13.216  INFO 9764 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-11-17 09:50:13.216  INFO 9764 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-11-17 09:50:13.231  INFO 9764 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+Field userServ in com.bzbess.hrma.BzBees1Application required a bean of type 'com.bzbess.hrma.services.UserService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.bzbess.hrma.services.UserService' in your configuration.
+
+2020-11-20 13:39:59.321  INFO 2600 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-20 13:39:59.341  INFO 2600 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19ms. Found 7 JPA repository interfaces.
+2020-11-20 13:39:59.447  INFO 2600 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-20 13:39:59.468  INFO 2600 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 479 ms
+2020-11-20 13:39:59.659  INFO 2600 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://176.223.122.51:3306/bpeople_BZBees'
+2020-11-20 13:39:59.850  INFO 2600 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 13:39:59.853  WARN 2600 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bzBees1Application': Unsatisfied dependency expressed through field 'userServ'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.bzbess.hrma.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-11-20 13:39:59.853  INFO 2600 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 13:39:59.870  INFO 2600 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-11-20 13:39:59.979 ERROR 2600 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userServ in com.bzbess.hrma.BzBees1Application required a bean of type 'com.bzbess.hrma.services.UserService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.bzbess.hrma.services.UserService' in your configuration.
+
+2020-11-20 13:40:08.041  INFO 2600 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-20 13:40:08.062  INFO 2600 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20ms. Found 7 JPA repository interfaces.
+2020-11-20 13:40:08.166  INFO 2600 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-20 13:40:08.187  INFO 2600 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 473 ms
+2020-11-20 13:40:08.357  INFO 2600 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://176.223.122.51:3306/bpeople_BZBees'
+2020-11-20 13:40:08.527  INFO 2600 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 13:40:08.530  WARN 2600 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bzBees1Application': Unsatisfied dependency expressed through field 'userServ'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.bzbess.hrma.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-11-20 13:40:08.530  INFO 2600 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 13:40:08.575  INFO 2600 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-11-20 13:40:08.674 ERROR 2600 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userServ in com.bzbess.hrma.BzBees1Application required a bean of type 'com.bzbess.hrma.services.UserService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.bzbess.hrma.services.UserService' in your configuration.
+
+2020-11-20 13:40:16.833  INFO 2600 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-20 13:40:16.837  INFO 2600 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3ms. Found 0 JPA repository interfaces.
+2020-11-20 13:40:16.940  INFO 2600 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-20 13:40:16.961  INFO 2600 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 436 ms
+2020-11-20 13:40:17.149  INFO 2600 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://176.223.122.51:3306/bpeople_BZBees'
+2020-11-20 13:40:17.408  INFO 2600 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 13:40:17.411  WARN 2600 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bzBees1Application': Unsatisfied dependency expressed through field 'userServ'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.bzbess.hrma.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-11-20 13:40:17.412  INFO 2600 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 13:40:17.542  INFO 2600 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-11-20 13:40:17.669 ERROR 2600 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userServ in com.bzbess.hrma.BzBees1Application required a bean of type 'com.bzbess.hrma.services.UserService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.bzbess.hrma.services.UserService' in your configuration.
+
+2020-11-20 13:40:25.761  INFO 2600 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-20 13:40:25.764  INFO 2600 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 JPA repository interfaces.
+2020-11-20 13:40:25.868  INFO 2600 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-20 13:40:25.889  INFO 2600 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 432 ms
+2020-11-20 13:40:26.081  INFO 2600 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://176.223.122.51:3306/bpeople_BZBees'
+2020-11-20 13:40:26.218  INFO 2600 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 13:40:26.224  WARN 2600 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bzBees1Application': Unsatisfied dependency expressed through field 'userServ'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.bzbess.hrma.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-11-20 13:40:26.224  INFO 2600 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 13:40:26.312  INFO 2600 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-11-20 13:40:26.451 ERROR 2600 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userServ in com.bzbess.hrma.BzBees1Application required a bean of type 'com.bzbess.hrma.services.UserService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.bzbess.hrma.services.UserService' in your configuration.
+
+2020-11-20 13:40:36.620  INFO 2600 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-20 13:40:36.622  INFO 2600 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1ms. Found 0 JPA repository interfaces.
+2020-11-20 13:40:36.732  INFO 2600 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-20 13:40:36.753  INFO 2600 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 425 ms
+2020-11-20 13:40:36.914  INFO 2600 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://176.223.122.51:3306/bpeople_BZBees'
+2020-11-20 13:40:37.002  INFO 2600 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 13:40:37.005  WARN 2600 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bzBees1Application': Unsatisfied dependency expressed through field 'userServ'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.bzbess.hrma.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-11-20 13:40:37.005  INFO 2600 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 13:40:37.014  INFO 2600 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-11-20 13:40:37.119 ERROR 2600 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userServ in com.bzbess.hrma.BzBees1Application required a bean of type 'com.bzbess.hrma.services.UserService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.bzbess.hrma.services.UserService' in your configuration.
+
+2020-11-20 13:40:46.222  INFO 2600 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-20 13:40:46.223  INFO 2600 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0ms. Found 0 JPA repository interfaces.
+2020-11-20 13:40:46.340  INFO 2600 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-20 13:40:46.361  INFO 2600 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 443 ms
+2020-11-20 13:40:46.524  INFO 2600 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://176.223.122.51:3306/bpeople_BZBees'
+2020-11-20 13:40:46.616  INFO 2600 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 13:40:46.619  WARN 2600 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bzBees1Application': Unsatisfied dependency expressed through field 'userServ'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.bzbess.hrma.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-11-20 13:40:46.619  INFO 2600 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 13:40:46.629  INFO 2600 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-11-20 13:40:46.735 ERROR 2600 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userServ in com.bzbess.hrma.BzBees1Application required a bean of type 'com.bzbess.hrma.services.UserService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.bzbess.hrma.services.UserService' in your configuration.
+
+2020-11-20 13:41:32.495  INFO 2600 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-20 13:41:32.496  INFO 2600 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0ms. Found 0 JPA repository interfaces.
+2020-11-20 13:41:32.617  INFO 2600 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-20 13:41:32.640  INFO 2600 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 445 ms
+2020-11-20 13:41:32.807  INFO 2600 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://176.223.122.51:3306/bpeople_BZBees'
+2020-11-20 13:41:32.897  INFO 2600 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 13:41:32.900  WARN 2600 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bzBees1Application': Unsatisfied dependency expressed through field 'userServ'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.bzbess.hrma.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-11-20 13:41:32.900  INFO 2600 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 13:41:32.909  INFO 2600 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-11-20 13:41:33.023 ERROR 2600 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userServ in com.bzbess.hrma.BzBees1Application required a bean of type 'com.bzbess.hrma.services.UserService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.bzbess.hrma.services.UserService' in your configuration.
+
+2020-11-20 13:42:01.236  INFO 15876 --- [restartedMain] com.bzbees.hrma.BzBees1Application       : Starting BzBees1Application on DESKTOP-626N0R4 with PID 15876 (C:\Users\rober\git\HRMA\BZBees-2\target\classes started by rober in C:\Users\rober\git\HRMA\BZBees-2)
+2020-11-20 13:42:01.239 DEBUG 15876 --- [restartedMain] com.bzbees.hrma.BzBees1Application       : Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2020-11-20 13:42:01.239  INFO 15876 --- [restartedMain] com.bzbees.hrma.BzBees1Application       : The following profiles are active: dev
+2020-11-20 13:42:01.281  INFO 15876 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-11-20 13:42:01.281  INFO 15876 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-11-20 13:42:02.123  INFO 15876 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-20 13:42:02.193  INFO 15876 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63ms. Found 7 JPA repository interfaces.
+2020-11-20 13:42:02.833  INFO 15876 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-20 13:42:02.929  INFO 15876 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1648 ms
+2020-11-20 13:42:03.341  INFO 15876 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://176.223.122.51:3306/bpeople_BZBees'
+2020-11-20 13:42:04.609  INFO 15876 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 13:42:05.290  WARN 15876 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-20 13:42:05.416  INFO 15876 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-20 13:42:06.006  INFO 15876 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-20 13:42:06.013  INFO 15876 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-11-20 13:42:06.042  INFO 15876 --- [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-20 13:42:06.064  INFO 15876 --- [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 21 ms
+2020-11-20 13:42:06.085  INFO 15876 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-20 13:42:06.088  INFO 15876 --- [restartedMain] com.bzbees.hrma.BzBees1Application       : Started BzBees1Application in 5.133 seconds (JVM running for 5.818)
+2020-11-20 13:42:19.912  INFO 15876 --- [Thread-5] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-20 13:42:19.914  INFO 15876 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 13:42:20.053  INFO 15876 --- [restartedMain] com.bzbees.hrma.BzBees1Application       : Starting BzBees1Application on DESKTOP-626N0R4 with PID 15876 (C:\Users\rober\git\HRMA\BZBees-2\target\classes started by rober in C:\Users\rober\git\HRMA\BZBees-2)
+2020-11-20 13:42:20.053 DEBUG 15876 --- [restartedMain] com.bzbees.hrma.BzBees1Application       : Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2020-11-20 13:42:20.053  INFO 15876 --- [restartedMain] com.bzbees.hrma.BzBees1Application       : The following profiles are active: dev
+2020-11-20 13:42:20.468  INFO 15876 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-20 13:42:20.490  INFO 15876 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22ms. Found 7 JPA repository interfaces.
+2020-11-20 13:42:20.610  INFO 15876 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-20 13:42:20.633  INFO 15876 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 577 ms
+2020-11-20 13:42:20.813  INFO 15876 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://176.223.122.51:3306/bpeople_BZBees'
+2020-11-20 13:42:21.131  INFO 15876 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 13:42:21.352  WARN 15876 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-20 13:42:21.377  INFO 15876 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-20 13:42:21.540  INFO 15876 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-20 13:42:21.542  INFO 15876 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-11-20 13:42:21.565  INFO 15876 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-20 13:42:21.565  INFO 15876 --- [restartedMain] com.bzbees.hrma.BzBees1Application       : Started BzBees1Application in 1.556 seconds (JVM running for 21.295)
+2020-11-20 13:42:21.569  INFO 15876 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-11-20 13:42:25.300  INFO 15876 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-20 13:42:25.303  INFO 15876 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2020-11-20 13:42:40.750  INFO 15876 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-20 13:42:40.751  INFO 15876 --- [Thread-8] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 13:42:40.856  INFO 15876 --- [restartedMain] com.bzbees.hrma.BzBees1Application       : Starting BzBees1Application on DESKTOP-626N0R4 with PID 15876 (C:\Users\rober\git\HRMA\BZBees-2\target\classes started by rober in C:\Users\rober\git\HRMA\BZBees-2)
+2020-11-20 13:42:40.856 DEBUG 15876 --- [restartedMain] com.bzbees.hrma.BzBees1Application       : Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2020-11-20 13:42:40.857  INFO 15876 --- [restartedMain] com.bzbees.hrma.BzBees1Application       : The following profiles are active: dev
+2020-11-20 13:42:41.168  INFO 15876 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-20 13:42:41.189  INFO 15876 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21ms. Found 7 JPA repository interfaces.
+2020-11-20 13:42:41.304  INFO 15876 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-20 13:42:41.329  INFO 15876 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 471 ms
+2020-11-20 13:42:41.500  INFO 15876 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://176.223.122.51:3306/bpeople_BZBees'
+2020-11-20 13:42:41.722  INFO 15876 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 13:42:42.038  WARN 15876 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-20 13:42:42.067  INFO 15876 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-20 13:42:42.212  INFO 15876 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-20 13:42:42.215  INFO 15876 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-11-20 13:42:42.237  INFO 15876 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-20 13:42:42.238  INFO 15876 --- [restartedMain] com.bzbees.hrma.BzBees1Application       : Started BzBees1Application in 1.408 seconds (JVM running for 41.967)
+2020-11-20 13:42:42.240  INFO 15876 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-11-20 13:42:46.562  INFO 15876 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-20 13:42:46.566  INFO 15876 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2020-11-20 13:42:46.569 DEBUG 15876 --- [http-nio-8080-exec-1] c.b.h.logging.ApplicationLoggerAspect    : 
+ 
+ 
+ 
+2020-11-20 13:42:46.571 DEBUG 15876 --- [http-nio-8080-exec-1] c.b.h.logging.ApplicationLoggerAspect    : ***************** BEFORE METHOD EXECUTION**************** 
+ com.bzbees.hrma.controllers.UserController.displayRegisterForm () with arguments[s] = [{}]
+2020-11-20 13:42:46.571 DEBUG 15876 --- [http-nio-8080-exec-1] c.b.h.logging.ApplicationLoggerAspect    : __________________________________________________________ 
+ 
+ 
+2020-11-20 14:16:02.880  INFO 15876 --- [Thread-13] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-20 14:16:02.882  INFO 15876 --- [Thread-13] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 14:16:02.994  INFO 15876 --- [restartedMain] com.bzbees.hrma.BzBees1Application       : Starting BzBees1Application on DESKTOP-626N0R4 with PID 15876 (C:\Users\rober\git\HRMA\BZBees-2\target\classes started by rober in C:\Users\rober\git\HRMA\BZBees-2)
+2020-11-20 14:16:02.994 DEBUG 15876 --- [restartedMain] com.bzbees.hrma.BzBees1Application       : Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2020-11-20 14:16:02.994  INFO 15876 --- [restartedMain] com.bzbees.hrma.BzBees1Application       : The following profiles are active: dev
+2020-11-20 14:16:03.327  INFO 15876 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-20 14:16:03.348  INFO 15876 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20ms. Found 7 JPA repository interfaces.
+2020-11-20 14:16:03.463  INFO 15876 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-20 14:16:03.490  INFO 15876 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 493 ms
+2020-11-20 14:16:03.681  INFO 15876 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://176.223.122.51:3306/bpeople_BZBees'
+2020-11-20 14:16:03.953  INFO 15876 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 14:16:04.256  WARN 15876 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-20 14:16:04.283  INFO 15876 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-20 14:16:04.465  INFO 15876 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-20 14:16:04.468  INFO 15876 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-11-20 14:16:04.491  INFO 15876 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-20 14:16:04.492  INFO 15876 --- [restartedMain] com.bzbees.hrma.BzBees1Application       : Started BzBees1Application in 1.525 seconds (JVM running for 2044.222)
+2020-11-20 14:16:04.494  INFO 15876 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-11-20 14:16:09.046  INFO 15876 --- [Thread-18] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-20 14:16:09.048  INFO 15876 --- [Thread-18] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 14:16:09.180  INFO 15876 --- [restartedMain] com.bzbees.hrma.BzBees1Application       : Starting BzBees1Application on DESKTOP-626N0R4 with PID 15876 (C:\Users\rober\git\HRMA\BZBees-2\target\classes started by rober in C:\Users\rober\git\HRMA\BZBees-2)
+2020-11-20 14:16:09.180 DEBUG 15876 --- [restartedMain] com.bzbees.hrma.BzBees1Application       : Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2020-11-20 14:16:09.180  INFO 15876 --- [restartedMain] com.bzbees.hrma.BzBees1Application       : The following profiles are active: dev
+2020-11-20 14:16:09.501  INFO 15876 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-20 14:16:09.521  INFO 15876 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20ms. Found 7 JPA repository interfaces.
+2020-11-20 14:16:09.631  INFO 15876 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-20 14:16:09.659  INFO 15876 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 477 ms
+2020-11-20 14:16:09.851  INFO 15876 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://176.223.122.51:3306/bpeople_BZBees'
+2020-11-20 14:16:10.038  INFO 15876 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 14:16:10.232  WARN 15876 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-20 14:16:10.257  INFO 15876 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-20 14:16:10.435  INFO 15876 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-20 14:16:10.437  INFO 15876 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-11-20 14:16:10.458  INFO 15876 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-20 14:16:10.459  INFO 15876 --- [restartedMain] com.bzbees.hrma.BzBees1Application       : Started BzBees1Application in 1.308 seconds (JVM running for 2050.189)
+2020-11-20 14:16:10.463  INFO 15876 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-11-20 14:16:17.050  INFO 15876 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-20 14:16:17.058  INFO 15876 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-11-20 14:16:17.067 DEBUG 15876 --- [http-nio-8080-exec-1] c.b.h.logging.ApplicationLoggerAspect    : 
+ 
+ 
+ 
+2020-11-20 14:16:17.067 DEBUG 15876 --- [http-nio-8080-exec-1] c.b.h.logging.ApplicationLoggerAspect    : ***************** BEFORE METHOD EXECUTION**************** 
+ com.bzbees.hrma.controllers.UserController.displayRegisterForm () with arguments[s] = [{person=com.bzbees.hrma.entities.Person@d1c64c7, userAccount=com.bzbees.hrma.entities.User@76687de9}]
+2020-11-20 14:16:17.068 DEBUG 15876 --- [http-nio-8080-exec-1] c.b.h.logging.ApplicationLoggerAspect    : __________________________________________________________ 
+ 
+ 
+2020-11-20 14:16:39.819 DEBUG 15876 --- [http-nio-8080-exec-7] c.b.h.logging.ApplicationLoggerAspect    : 
+ 
+ 
+ 
+2020-11-20 14:16:39.819 DEBUG 15876 --- [http-nio-8080-exec-7] c.b.h.logging.ApplicationLoggerAspect    : ***************** BEFORE METHOD EXECUTION**************** 
+ com.bzbees.hrma.controllers.UserController.createAndSaveUserAndPerson () with arguments[s] = [{user=com.bzbees.hrma.entities.User@c0a64e, org.springframework.validation.BindingResult.user=org.springframework.validation.BeanPropertyBindingResult: 0 errors, person=com.bzbees.hrma.entities.Person@d1c64c7, org.springframework.validation.BindingResult.person=org.springframework.validation.BeanPropertyBindingResult: 0 errors}, com.bzbees.hrma.entities.User@c0a64e, com.bzbees.hrma.entities.Person@d1c64c7, {}]
+2020-11-20 14:16:39.819 DEBUG 15876 --- [http-nio-8080-exec-7] c.b.h.logging.ApplicationLoggerAspect    : __________________________________________________________ 
+ 
+ 
+2020-11-20 14:16:39.832 DEBUG 15876 --- [http-nio-8080-exec-1] c.b.h.logging.ApplicationLoggerAspect    : 
+ 
+ 
+ 
+2020-11-20 14:16:39.832 DEBUG 15876 --- [http-nio-8080-exec-1] c.b.h.logging.ApplicationLoggerAspect    : ***************** BEFORE METHOD EXECUTION**************** 
+ com.bzbees.hrma.controllers.UserController.displayAddSkill () with arguments[s] = [{person=com.bzbees.hrma.entities.Person@d1c64c7, skillsList=[], skill=com.bzbees.hrma.entities.Skill@8d5b42c}]
+2020-11-20 14:16:39.832 DEBUG 15876 --- [http-nio-8080-exec-1] c.b.h.logging.ApplicationLoggerAspect    : __________________________________________________________ 
+ 
+ 
+2020-11-20 14:16:58.769 DEBUG 15876 --- [http-nio-8080-exec-3] c.b.h.logging.ApplicationLoggerAspect    : 
+ 
+ 
+ 
+2020-11-20 14:16:58.769 DEBUG 15876 --- [http-nio-8080-exec-3] c.b.h.logging.ApplicationLoggerAspect    : ***************** BEFORE METHOD EXECUTION**************** 
+ com.bzbees.hrma.controllers.UserController.addSkill () with arguments[s] = [{skillsList=[], person=com.bzbees.hrma.entities.Person@d1c64c7, org.springframework.validation.BindingResult.person=org.springframework.validation.BeanPropertyBindingResult: 0 errors, skill=com.bzbees.hrma.entities.Skill@473806fa, org.springframework.validation.BindingResult.skill=org.springframework.validation.BeanPropertyBindingResult: 0 errors}, com.bzbees.hrma.entities.Person@d1c64c7, com.bzbees.hrma.entities.Skill@473806fa, {}]
+2020-11-20 14:16:58.769 DEBUG 15876 --- [http-nio-8080-exec-3] c.b.h.logging.ApplicationLoggerAspect    : __________________________________________________________ 
+ 
+ 
+2020-11-20 14:16:58.777 DEBUG 15876 --- [http-nio-8080-exec-2] c.b.h.logging.ApplicationLoggerAspect    : 
+ 
+ 
+ 
+2020-11-20 14:16:58.777 DEBUG 15876 --- [http-nio-8080-exec-2] c.b.h.logging.ApplicationLoggerAspect    : ***************** BEFORE METHOD EXECUTION**************** 
+ com.bzbees.hrma.controllers.UserController.displayAddSkill () with arguments[s] = [{skillsList=[com.bzbees.hrma.entities.Skill@473806fa], person=com.bzbees.hrma.entities.Person@d1c64c7, skill=com.bzbees.hrma.entities.Skill@35e4471a}]
+2020-11-20 14:16:58.777 DEBUG 15876 --- [http-nio-8080-exec-2] c.b.h.logging.ApplicationLoggerAspect    : __________________________________________________________ 
+ 
+ 
+2020-11-20 14:17:02.536 DEBUG 15876 --- [http-nio-8080-exec-2] c.b.h.logging.ApplicationLoggerAspect    : 
+ 
+ 
+ 
+2020-11-20 14:17:02.536 DEBUG 15876 --- [http-nio-8080-exec-2] c.b.h.logging.ApplicationLoggerAspect    : ***************** BEFORE METHOD EXECUTION**************** 
+ com.bzbees.hrma.controllers.UserController.addSkill () with arguments[s] = [{skillsList=[com.bzbees.hrma.entities.Skill@473806fa, com.bzbees.hrma.entities.Skill@74800a85], person=com.bzbees.hrma.entities.Person@d1c64c7, org.springframework.validation.BindingResult.person=org.springframework.validation.BeanPropertyBindingResult: 0 errors, skill=com.bzbees.hrma.entities.Skill@74800a85, org.springframework.validation.BindingResult.skill=org.springframework.validation.BeanPropertyBindingResult: 0 errors}, com.bzbees.hrma.entities.Person@d1c64c7, com.bzbees.hrma.entities.Skill@74800a85, {}]
+2020-11-20 14:17:02.536 DEBUG 15876 --- [http-nio-8080-exec-2] c.b.h.logging.ApplicationLoggerAspect    : __________________________________________________________ 
+ 
+ 
+2020-11-20 14:17:02.541 DEBUG 15876 --- [http-nio-8080-exec-8] c.b.h.logging.ApplicationLoggerAspect    : 
+ 
+ 
+ 
+2020-11-20 14:17:02.541 DEBUG 15876 --- [http-nio-8080-exec-8] c.b.h.logging.ApplicationLoggerAspect    : ***************** BEFORE METHOD EXECUTION**************** 
+ com.bzbees.hrma.controllers.UserController.displayAddSkill () with arguments[s] = [{skillsList=[com.bzbees.hrma.entities.Skill@3d4cb981, com.bzbees.hrma.entities.Skill@74800a85], person=com.bzbees.hrma.entities.Person@d1c64c7, skill=com.bzbees.hrma.entities.Skill@1344b2}]
+2020-11-20 14:17:02.541 DEBUG 15876 --- [http-nio-8080-exec-8] c.b.h.logging.ApplicationLoggerAspect    : __________________________________________________________ 
+ 
+ 
+2020-11-20 14:17:12.430 DEBUG 15876 --- [http-nio-8080-exec-9] c.b.h.logging.ApplicationLoggerAspect    : 
+ 
+ 
+ 
+2020-11-20 14:17:12.431 DEBUG 15876 --- [http-nio-8080-exec-9] c.b.h.logging.ApplicationLoggerAspect    : ***************** BEFORE METHOD EXECUTION**************** 
+ com.bzbees.hrma.controllers.UserController.saveListOfSkills () with arguments[s] = [{skillsList=[com.bzbees.hrma.entities.Skill@3d4cb981, com.bzbees.hrma.entities.Skill@74800a85], person=com.bzbees.hrma.entities.Person@d1c64c7, org.springframework.validation.BindingResult.person=org.springframework.validation.BeanPropertyBindingResult: 0 errors, skill=com.bzbees.hrma.entities.Skill@79f92931, org.springframework.validation.BindingResult.skill=org.springframework.validation.BeanPropertyBindingResult: 0 errors}, com.bzbees.hrma.entities.Person@d1c64c7, com.bzbees.hrma.entities.Skill@79f92931, {}]
+2020-11-20 14:17:12.431 DEBUG 15876 --- [http-nio-8080-exec-9] c.b.h.logging.ApplicationLoggerAspect    : __________________________________________________________ 
+ 
+ 
+2020-11-20 14:17:12.438 DEBUG 15876 --- [http-nio-8080-exec-5] c.b.h.logging.ApplicationLoggerAspect    : 
+ 
+ 
+ 
+2020-11-20 14:17:12.439 DEBUG 15876 --- [http-nio-8080-exec-5] c.b.h.logging.ApplicationLoggerAspect    : ***************** BEFORE METHOD EXECUTION**************** 
+ com.bzbees.hrma.controllers.UserController.displayLang () with arguments[s] = [{skillsList=[com.bzbees.hrma.entities.Skill@63517c4c, com.bzbees.hrma.entities.Skill@2202b120], person=com.bzbees.hrma.entities.Person@d1c64c7, langList=[], lang=com.bzbees.hrma.entities.Language@6a9347a}]
+2020-11-20 14:17:12.439 DEBUG 15876 --- [http-nio-8080-exec-5] c.b.h.logging.ApplicationLoggerAspect    : __________________________________________________________ 
+ 
+ 
+2020-11-20 14:17:28.238 DEBUG 15876 --- [http-nio-8080-exec-5] c.b.h.logging.ApplicationLoggerAspect    : 
+ 
+ 
+ 
+2020-11-20 14:17:28.238 DEBUG 15876 --- [http-nio-8080-exec-5] c.b.h.logging.ApplicationLoggerAspect    : ***************** BEFORE METHOD EXECUTION**************** 
+ com.bzbees.hrma.controllers.UserController.addLang () with arguments[s] = [{skillsList=[com.bzbees.hrma.entities.Skill@63517c4c, com.bzbees.hrma.entities.Skill@2202b120], langList=[], person=com.bzbees.hrma.entities.Person@d1c64c7, org.springframework.validation.BindingResult.person=org.springframework.validation.BeanPropertyBindingResult: 0 errors, language=com.bzbees.hrma.entities.Language@7772ae01, org.springframework.validation.BindingResult.language=org.springframework.validation.BeanPropertyBindingResult: 0 errors}, com.bzbees.hrma.entities.Person@d1c64c7, com.bzbees.hrma.entities.Language@7772ae01, {}]
+2020-11-20 14:17:28.238 DEBUG 15876 --- [http-nio-8080-exec-5] c.b.h.logging.ApplicationLoggerAspect    : __________________________________________________________ 
+ 
+ 
+2020-11-20 14:17:28.243 DEBUG 15876 --- [http-nio-8080-exec-9] c.b.h.logging.ApplicationLoggerAspect    : 
+ 
+ 
+ 
+2020-11-20 14:17:28.243 DEBUG 15876 --- [http-nio-8080-exec-9] c.b.h.logging.ApplicationLoggerAspect    : ***************** BEFORE METHOD EXECUTION**************** 
+ com.bzbees.hrma.controllers.UserController.displayLang () with arguments[s] = [{langList=[com.bzbees.hrma.entities.Language@7772ae01], person=com.bzbees.hrma.entities.Person@d1c64c7, skillsList=[com.bzbees.hrma.entities.Skill@63517c4c, com.bzbees.hrma.entities.Skill@2202b120], lang=com.bzbees.hrma.entities.Language@3b4665ad}]
+2020-11-20 14:17:28.244 DEBUG 15876 --- [http-nio-8080-exec-9] c.b.h.logging.ApplicationLoggerAspect    : __________________________________________________________ 
+ 
+ 
+2020-11-20 14:17:32.247 DEBUG 15876 --- [http-nio-8080-exec-5] c.b.h.logging.ApplicationLoggerAspect    : 
+ 
+ 
+ 
+2020-11-20 14:17:32.247 DEBUG 15876 --- [http-nio-8080-exec-5] c.b.h.logging.ApplicationLoggerAspect    : ***************** BEFORE METHOD EXECUTION**************** 
+ com.bzbees.hrma.controllers.UserController.addLang () with arguments[s] = [{skillsList=[com.bzbees.hrma.entities.Skill@63517c4c, com.bzbees.hrma.entities.Skill@2202b120], langList=[com.bzbees.hrma.entities.Language@7772ae01, com.bzbees.hrma.entities.Language@1072717f], person=com.bzbees.hrma.entities.Person@d1c64c7, org.springframework.validation.BindingResult.person=org.springframework.validation.BeanPropertyBindingResult: 0 errors, language=com.bzbees.hrma.entities.Language@1072717f, org.springframework.validation.BindingResult.language=org.springframework.validation.BeanPropertyBindingResult: 0 errors}, com.bzbees.hrma.entities.Person@d1c64c7, com.bzbees.hrma.entities.Language@1072717f, {}]
+2020-11-20 14:17:32.247 DEBUG 15876 --- [http-nio-8080-exec-5] c.b.h.logging.ApplicationLoggerAspect    : __________________________________________________________ 
+ 
+ 
+2020-11-20 14:17:32.251 DEBUG 15876 --- [http-nio-8080-exec-9] c.b.h.logging.ApplicationLoggerAspect    : 
+ 
+ 
+ 
+2020-11-20 14:17:32.251 DEBUG 15876 --- [http-nio-8080-exec-9] c.b.h.logging.ApplicationLoggerAspect    : ***************** BEFORE METHOD EXECUTION**************** 
+ com.bzbees.hrma.controllers.UserController.displayLang () with arguments[s] = [{langList=[com.bzbees.hrma.entities.Language@73b199b0, com.bzbees.hrma.entities.Language@1072717f], person=com.bzbees.hrma.entities.Person@d1c64c7, skillsList=[com.bzbees.hrma.entities.Skill@63517c4c, com.bzbees.hrma.entities.Skill@2202b120], lang=com.bzbees.hrma.entities.Language@45b1746d}]
+2020-11-20 14:17:32.252 DEBUG 15876 --- [http-nio-8080-exec-9] c.b.h.logging.ApplicationLoggerAspect    : __________________________________________________________ 
+ 
+ 
+2020-11-20 14:17:33.857 DEBUG 15876 --- [http-nio-8080-exec-3] c.b.h.logging.ApplicationLoggerAspect    : 
+ 
+ 
+ 
+2020-11-20 14:17:33.857 DEBUG 15876 --- [http-nio-8080-exec-3] c.b.h.logging.ApplicationLoggerAspect    : ***************** BEFORE METHOD EXECUTION**************** 
+ com.bzbees.hrma.controllers.UserController.saveListOfLangs () with arguments[s] = [{skillsList=[com.bzbees.hrma.entities.Skill@63517c4c, com.bzbees.hrma.entities.Skill@2202b120], langList=[com.bzbees.hrma.entities.Language@73b199b0, com.bzbees.hrma.entities.Language@1072717f], person=com.bzbees.hrma.entities.Person@d1c64c7, org.springframework.validation.BindingResult.person=org.springframework.validation.BeanPropertyBindingResult: 0 errors, language=com.bzbees.hrma.entities.Language@14be3472, org.springframework.validation.BindingResult.language=org.springframework.validation.BeanPropertyBindingResult: 0 errors}, com.bzbees.hrma.entities.Person@d1c64c7, com.bzbees.hrma.entities.Language@14be3472, {}]
+2020-11-20 14:17:33.857 DEBUG 15876 --- [http-nio-8080-exec-3] c.b.h.logging.ApplicationLoggerAspect    : __________________________________________________________ 
+ 
+ 
+2020-11-20 14:17:33.861 DEBUG 15876 --- [http-nio-8080-exec-1] c.b.h.logging.ApplicationLoggerAspect    : 
+ 
+ 
+ 
+2020-11-20 14:17:33.861 DEBUG 15876 --- [http-nio-8080-exec-1] c.b.h.logging.ApplicationLoggerAspect    : ***************** BEFORE METHOD EXECUTION**************** 
+ com.bzbees.hrma.controllers.UserController.displayJobForm () with arguments[s] = [{langList=[com.bzbees.hrma.entities.Language@7411060a, com.bzbees.hrma.entities.Language@2d268ce5], person=com.bzbees.hrma.entities.Person@d1c64c7, skillsList=[com.bzbees.hrma.entities.Skill@63517c4c, com.bzbees.hrma.entities.Skill@2202b120], jobList=[], job=com.bzbees.hrma.entities.Job@3636ab38}]
+2020-11-20 14:17:33.862 DEBUG 15876 --- [http-nio-8080-exec-1] c.b.h.logging.ApplicationLoggerAspect    : __________________________________________________________ 
+ 
+ 
+2020-11-20 14:17:49.927 DEBUG 15876 --- [http-nio-8080-exec-2] c.b.h.logging.ApplicationLoggerAspect    : 
+ 
+ 
+ 
+2020-11-20 14:17:49.927 DEBUG 15876 --- [http-nio-8080-exec-2] c.b.h.logging.ApplicationLoggerAspect    : ***************** BEFORE METHOD EXECUTION**************** 
+ com.bzbees.hrma.controllers.UserController.addJobsToPerson () with arguments[s] = [{skillsList=[com.bzbees.hrma.entities.Skill@63517c4c, com.bzbees.hrma.entities.Skill@2202b120], langList=[com.bzbees.hrma.entities.Language@7411060a, com.bzbees.hrma.entities.Language@2d268ce5], jobList=[], person=com.bzbees.hrma.entities.Person@d1c64c7, org.springframework.validation.BindingResult.person=org.springframework.validation.BeanPropertyBindingResult: 0 errors, job=com.bzbees.hrma.entities.Job@45c9af7e, org.springframework.validation.BindingResult.job=org.springframework.validation.BeanPropertyBindingResult: 0 errors}, com.bzbees.hrma.entities.Person@d1c64c7, com.bzbees.hrma.entities.Job@45c9af7e, {}]
+2020-11-20 14:17:49.927 DEBUG 15876 --- [http-nio-8080-exec-2] c.b.h.logging.ApplicationLoggerAspect    : __________________________________________________________ 
+ 
+ 
+2020-11-20 14:17:49.931 DEBUG 15876 --- [http-nio-8080-exec-6] c.b.h.logging.ApplicationLoggerAspect    : 
+ 
+ 
+ 
+2020-11-20 14:17:49.931 DEBUG 15876 --- [http-nio-8080-exec-6] c.b.h.logging.ApplicationLoggerAspect    : ***************** BEFORE METHOD EXECUTION**************** 
+ com.bzbees.hrma.controllers.UserController.displayJobForm () with arguments[s] = [{jobList=[com.bzbees.hrma.entities.Job@45c9af7e], person=com.bzbees.hrma.entities.Person@d1c64c7, skillsList=[com.bzbees.hrma.entities.Skill@63517c4c, com.bzbees.hrma.entities.Skill@2202b120], langList=[com.bzbees.hrma.entities.Language@7411060a, com.bzbees.hrma.entities.Language@2d268ce5], job=com.bzbees.hrma.entities.Job@7d15444b}]
+2020-11-20 14:17:49.931 DEBUG 15876 --- [http-nio-8080-exec-6] c.b.h.logging.ApplicationLoggerAspect    : __________________________________________________________ 
+ 
+ 
+2020-11-20 14:17:54.418 DEBUG 15876 --- [http-nio-8080-exec-9] c.b.h.logging.ApplicationLoggerAspect    : 
+ 
+ 
+ 
+2020-11-20 14:17:54.419 DEBUG 15876 --- [http-nio-8080-exec-9] c.b.h.logging.ApplicationLoggerAspect    : ***************** BEFORE METHOD EXECUTION**************** 
+ com.bzbees.hrma.controllers.UserController.saveListOfJobs () with arguments[s] = [{skillsList=[com.bzbees.hrma.entities.Skill@63517c4c, com.bzbees.hrma.entities.Skill@2202b120], langList=[com.bzbees.hrma.entities.Language@7411060a, com.bzbees.hrma.entities.Language@2d268ce5], jobList=[com.bzbees.hrma.entities.Job@45c9af7e], person=com.bzbees.hrma.entities.Person@d1c64c7, org.springframework.validation.BindingResult.person=org.springframework.validation.BeanPropertyBindingResult: 0 errors, job=com.bzbees.hrma.entities.Job@6058b8e7, org.springframework.validation.BindingResult.job=org.springframework.validation.BeanPropertyBindingResult: 0 errors}, com.bzbees.hrma.entities.Person@d1c64c7, com.bzbees.hrma.entities.Job@6058b8e7, {}, org.springframework.web.bind.support.SimpleSessionStatus@7ed9913c]
+2020-11-20 14:17:54.419 DEBUG 15876 --- [http-nio-8080-exec-9] c.b.h.logging.ApplicationLoggerAspect    : __________________________________________________________ 
+ 
+ 
+2020-11-20 14:17:54.423 DEBUG 15876 --- [http-nio-8080-exec-6] c.b.h.logging.ApplicationLoggerAspect    : 
+ 
+ 
+ 
+2020-11-20 14:17:54.423 DEBUG 15876 --- [http-nio-8080-exec-6] c.b.h.logging.ApplicationLoggerAspect    : ***************** BEFORE METHOD EXECUTION**************** 
+ com.bzbees.hrma.controllers.UserController.displayUploadForm () with arguments[s] = [{jobList=[com.bzbees.hrma.entities.Job@5d486aea], person=com.bzbees.hrma.entities.Person@d1c64c7, skillsList=[com.bzbees.hrma.entities.Skill@63517c4c, com.bzbees.hrma.entities.Skill@2202b120], langList=[com.bzbees.hrma.entities.Language@7411060a, com.bzbees.hrma.entities.Language@2d268ce5], docList=[], doc=com.bzbees.hrma.entities.Doc@1cf515ef}]
+2020-11-20 14:17:54.423 DEBUG 15876 --- [http-nio-8080-exec-6] c.b.h.logging.ApplicationLoggerAspect    : __________________________________________________________ 
+ 
+ 
+2020-11-20 14:18:07.876 DEBUG 15876 --- [http-nio-8080-exec-10] c.b.h.logging.ApplicationLoggerAspect    : 
+ 
+ 
+ 
+2020-11-20 14:18:07.876 DEBUG 15876 --- [http-nio-8080-exec-10] c.b.h.logging.ApplicationLoggerAspect    : ***************** BEFORE METHOD EXECUTION**************** 
+ com.bzbees.hrma.controllers.UserController.addDocs () with arguments[s] = [{docList=[], skillsList=[com.bzbees.hrma.entities.Skill@63517c4c, com.bzbees.hrma.entities.Skill@2202b120], langList=[com.bzbees.hrma.entities.Language@7411060a, com.bzbees.hrma.entities.Language@2d268ce5], jobList=[com.bzbees.hrma.entities.Job@5d486aea], person=com.bzbees.hrma.entities.Person@d1c64c7, org.springframework.validation.BindingResult.person=org.springframework.validation.BeanPropertyBindingResult: 0 errors}, com.bzbees.hrma.entities.Person@d1c64c7, [Lorg.springframework.web.multipart.MultipartFile;@2efb91f6, {}]
+2020-11-20 14:18:07.876 DEBUG 15876 --- [http-nio-8080-exec-10] c.b.h.logging.ApplicationLoggerAspect    : __________________________________________________________ 
+ 
+ 
+2020-11-20 14:18:07.883 DEBUG 15876 --- [http-nio-8080-exec-1] c.b.h.logging.ApplicationLoggerAspect    : 
+ 
+ 
+ 
+2020-11-20 14:18:07.883 DEBUG 15876 --- [http-nio-8080-exec-1] c.b.h.logging.ApplicationLoggerAspect    : ***************** BEFORE METHOD EXECUTION**************** 
+ com.bzbees.hrma.controllers.UserController.displayUploadForm () with arguments[s] = [{docList=[com.bzbees.hrma.entities.Doc@6f65da58, com.bzbees.hrma.entities.Doc@3af5b8e0, com.bzbees.hrma.entities.Doc@6aebcfad], person=com.bzbees.hrma.entities.Person@d1c64c7, skillsList=[com.bzbees.hrma.entities.Skill@63517c4c, com.bzbees.hrma.entities.Skill@2202b120], langList=[com.bzbees.hrma.entities.Language@7411060a, com.bzbees.hrma.entities.Language@2d268ce5], jobList=[com.bzbees.hrma.entities.Job@5d486aea], doc=com.bzbees.hrma.entities.Doc@448f9a9}]
+2020-11-20 14:18:07.883 DEBUG 15876 --- [http-nio-8080-exec-1] c.b.h.logging.ApplicationLoggerAspect    : __________________________________________________________ 
+ 
+ 
+2020-11-20 14:18:18.961 DEBUG 15876 --- [http-nio-8080-exec-7] c.b.h.logging.ApplicationLoggerAspect    : 
+ 
+ 
+ 
+2020-11-20 14:18:18.962 DEBUG 15876 --- [http-nio-8080-exec-7] c.b.h.logging.ApplicationLoggerAspect    : ***************** BEFORE METHOD EXECUTION**************** 
+ com.bzbees.hrma.controllers.UserController.saveDocs () with arguments[s] = [{docList=[com.bzbees.hrma.entities.Doc@6f65da58, com.bzbees.hrma.entities.Doc@3af5b8e0, com.bzbees.hrma.entities.Doc@6aebcfad], skillsList=[com.bzbees.hrma.entities.Skill@63517c4c, com.bzbees.hrma.entities.Skill@2202b120], langList=[com.bzbees.hrma.entities.Language@7411060a, com.bzbees.hrma.entities.Language@2d268ce5], jobList=[com.bzbees.hrma.entities.Job@5d486aea], person=com.bzbees.hrma.entities.Person@d1c64c7, org.springframework.validation.BindingResult.person=org.springframework.validation.BeanPropertyBindingResult: 0 errors}, com.bzbees.hrma.entities.Person@d1c64c7, {}]
+2020-11-20 14:18:18.962 DEBUG 15876 --- [http-nio-8080-exec-7] c.b.h.logging.ApplicationLoggerAspect    : __________________________________________________________ 
+ 
+ 
+2020-11-20 14:18:18.967 DEBUG 15876 --- [http-nio-8080-exec-10] c.b.h.logging.ApplicationLoggerAspect    : 
+ 
+ 
+ 
+2020-11-20 14:18:18.967 DEBUG 15876 --- [http-nio-8080-exec-10] c.b.h.logging.ApplicationLoggerAspect    : ***************** BEFORE METHOD EXECUTION**************** 
+ com.bzbees.hrma.controllers.UserController.displayProfile () with arguments[s] = [{docList=[com.bzbees.hrma.entities.Doc@39c6f362, com.bzbees.hrma.entities.Doc@d27cbae, com.bzbees.hrma.entities.Doc@5b46975], person=com.bzbees.hrma.entities.Person@d1c64c7, skillsList=[com.bzbees.hrma.entities.Skill@63517c4c, com.bzbees.hrma.entities.Skill@2202b120], langList=[com.bzbees.hrma.entities.Language@7411060a, com.bzbees.hrma.entities.Language@2d268ce5], jobList=[com.bzbees.hrma.entities.Job@5d486aea], picList=[], lastPicList=[], img=com.bzbees.hrma.entities.ProfileImg@ef07ec, job=com.bzbees.hrma.entities.Job@2b2d6167, skill=com.bzbees.hrma.entities.Skill@59ab21d5, lang=com.bzbees.hrma.entities.Language@3b22201d}]
+2020-11-20 14:18:18.968 DEBUG 15876 --- [http-nio-8080-exec-10] c.b.h.logging.ApplicationLoggerAspect    : __________________________________________________________ 
+ 
+ 
+2020-11-20 14:18:51.079 DEBUG 15876 --- [http-nio-8080-exec-9] c.b.h.logging.ApplicationLoggerAspect    : 
+ 
+ 
+ 
+2020-11-20 14:18:51.079 DEBUG 15876 --- [http-nio-8080-exec-9] c.b.h.logging.ApplicationLoggerAspect    : ***************** BEFORE METHOD EXECUTION**************** 
+ com.bzbees.hrma.controllers.UserController.addProfileImg () with arguments[s] = [{docList=[com.bzbees.hrma.entities.Doc@39c6f362, com.bzbees.hrma.entities.Doc@d27cbae, com.bzbees.hrma.entities.Doc@5b46975], picList=[], skillsList=[com.bzbees.hrma.entities.Skill@63517c4c, com.bzbees.hrma.entities.Skill@2202b120], langList=[com.bzbees.hrma.entities.Language@7411060a, com.bzbees.hrma.entities.Language@2d268ce5], jobList=[com.bzbees.hrma.entities.Job@5d486aea], lastPicList=[], person=com.bzbees.hrma.entities.Person@d1c64c7, org.springframework.validation.BindingResult.person=org.springframework.validation.BeanPropertyBindingResult: 0 errors}, com.bzbees.hrma.entities.Person@d1c64c7, org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@64f2980e, {}]
+2020-11-20 14:18:51.079 DEBUG 15876 --- [http-nio-8080-exec-9] c.b.h.logging.ApplicationLoggerAspect    : __________________________________________________________ 
+ 
+ 
+2020-11-20 14:19:19.185 DEBUG 15876 --- [http-nio-8080-exec-8] c.b.h.logging.ApplicationLoggerAspect    : 
+ 
+ 
+ 
+2020-11-20 14:19:19.185 DEBUG 15876 --- [http-nio-8080-exec-8] c.b.h.logging.ApplicationLoggerAspect    : ***************** BEFORE METHOD EXECUTION**************** 
+ com.bzbees.hrma.controllers.UserController.addProfileImg () with arguments[s] = [{docList=[com.bzbees.hrma.entities.Doc@39c6f362, com.bzbees.hrma.entities.Doc@d27cbae, com.bzbees.hrma.entities.Doc@5b46975], picList=[], skillsList=[com.bzbees.hrma.entities.Skill@63517c4c, com.bzbees.hrma.entities.Skill@2202b120], langList=[com.bzbees.hrma.entities.Language@7411060a, com.bzbees.hrma.entities.Language@2d268ce5], jobList=[com.bzbees.hrma.entities.Job@5d486aea], lastPicList=[], person=com.bzbees.hrma.entities.Person@d1c64c7, org.springframework.validation.BindingResult.person=org.springframework.validation.BeanPropertyBindingResult: 0 errors}, com.bzbees.hrma.entities.Person@d1c64c7, org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@9bc2560, {}]
+2020-11-20 14:19:19.185 DEBUG 15876 --- [http-nio-8080-exec-8] c.b.h.logging.ApplicationLoggerAspect    : __________________________________________________________ 
+ 
+ 
+2020-11-20 14:19:19.192 DEBUG 15876 --- [http-nio-8080-exec-1] c.b.h.logging.ApplicationLoggerAspect    : 
+ 
+ 
+ 
+2020-11-20 14:19:19.192 DEBUG 15876 --- [http-nio-8080-exec-1] c.b.h.logging.ApplicationLoggerAspect    : ***************** BEFORE METHOD EXECUTION**************** 
+ com.bzbees.hrma.controllers.UserController.displayProfile () with arguments[s] = [{img=com.bzbees.hrma.entities.ProfileImg@2375ded9, lastPicList=[com.bzbees.hrma.entities.ProfileImg@2375ded9], picList=[com.bzbees.hrma.entities.ProfileImg@2375ded9], person=com.bzbees.hrma.entities.Person@d1c64c7, docList=[com.bzbees.hrma.entities.Doc@39c6f362, com.bzbees.hrma.entities.Doc@d27cbae, com.bzbees.hrma.entities.Doc@5b46975], skillsList=[com.bzbees.hrma.entities.Skill@63517c4c, com.bzbees.hrma.entities.Skill@2202b120], langList=[com.bzbees.hrma.entities.Language@7411060a, com.bzbees.hrma.entities.Language@2d268ce5], jobList=[com.bzbees.hrma.entities.Job@5d486aea], job=com.bzbees.hrma.entities.Job@52ad7b55, skill=com.bzbees.hrma.entities.Skill@d7c1185, lang=com.bzbees.hrma.entities.Language@200f7a3a}]
+2020-11-20 14:19:19.193 DEBUG 15876 --- [http-nio-8080-exec-1] c.b.h.logging.ApplicationLoggerAspect    : __________________________________________________________ 
+ 
+ 
+2020-11-20 14:19:23.184 DEBUG 15876 --- [http-nio-8080-exec-2] c.b.h.logging.ApplicationLoggerAspect    : 
+ 
+ 
+ 
+2020-11-20 14:19:23.184 DEBUG 15876 --- [http-nio-8080-exec-2] c.b.h.logging.ApplicationLoggerAspect    : ***************** BEFORE METHOD EXECUTION**************** 
+ com.bzbees.hrma.controllers.UserController.showProfileImg () with arguments[s] = [1]
+2020-11-20 14:19:23.185 DEBUG 15876 --- [http-nio-8080-exec-2] c.b.h.logging.ApplicationLoggerAspect    : __________________________________________________________ 
+ 
+ 
+2020-11-20 14:19:54.428 DEBUG 15876 --- [http-nio-8080-exec-8] c.b.h.logging.ApplicationLoggerAspect    : 
+ 
+ 
+ 
+2020-11-20 14:19:54.428 DEBUG 15876 --- [http-nio-8080-exec-8] c.b.h.logging.ApplicationLoggerAspect    : ***************** BEFORE METHOD EXECUTION**************** 
+ com.bzbees.hrma.controllers.UserController.deleteSkillFromProfile () with arguments[s] = [1, com.bzbees.hrma.entities.Person@d1c64c7, {docList=[com.bzbees.hrma.entities.Doc@39c6f362, com.bzbees.hrma.entities.Doc@d27cbae, com.bzbees.hrma.entities.Doc@5b46975], picList=[com.bzbees.hrma.entities.ProfileImg@2375ded9], skillsList=[com.bzbees.hrma.entities.Skill@63517c4c, com.bzbees.hrma.entities.Skill@2202b120], langList=[com.bzbees.hrma.entities.Language@7411060a, com.bzbees.hrma.entities.Language@2d268ce5], jobList=[com.bzbees.hrma.entities.Job@5d486aea], lastPicList=[com.bzbees.hrma.entities.ProfileImg@2375ded9], person=com.bzbees.hrma.entities.Person@d1c64c7, org.springframework.validation.BindingResult.person=org.springframework.validation.BeanPropertyBindingResult: 0 errors}, {}]
+2020-11-20 14:19:54.428 DEBUG 15876 --- [http-nio-8080-exec-8] c.b.h.logging.ApplicationLoggerAspect    : __________________________________________________________ 
+ 
+ 
+2020-11-20 14:19:54.433 DEBUG 15876 --- [http-nio-8080-exec-1] c.b.h.logging.ApplicationLoggerAspect    : 
+ 
+ 
+ 
+2020-11-20 14:19:54.433 DEBUG 15876 --- [http-nio-8080-exec-1] c.b.h.logging.ApplicationLoggerAspect    : ***************** BEFORE METHOD EXECUTION**************** 
+ com.bzbees.hrma.controllers.UserController.displayProfile () with arguments[s] = [{img=com.bzbees.hrma.entities.ProfileImg@108a0f4, lastPicList=[com.bzbees.hrma.entities.ProfileImg@108a0f4], picList=[com.bzbees.hrma.entities.ProfileImg@31e007da, com.bzbees.hrma.entities.ProfileImg@108a0f4], person=com.bzbees.hrma.entities.Person@d1c64c7, docList=[com.bzbees.hrma.entities.Doc@39c6f362, com.bzbees.hrma.entities.Doc@d27cbae, com.bzbees.hrma.entities.Doc@5b46975], skillsList=[com.bzbees.hrma.entities.Skill@63517c4c, com.bzbees.hrma.entities.Skill@2202b120], langList=[com.bzbees.hrma.entities.Language@7411060a, com.bzbees.hrma.entities.Language@2d268ce5], jobList=[com.bzbees.hrma.entities.Job@5d486aea], job=com.bzbees.hrma.entities.Job@3aea6f48, skill=com.bzbees.hrma.entities.Skill@bcad74b, lang=com.bzbees.hrma.entities.Language@26e15ea5}]
+2020-11-20 14:19:54.434 DEBUG 15876 --- [http-nio-8080-exec-1] c.b.h.logging.ApplicationLoggerAspect    : __________________________________________________________ 
+ 
+ 
+2020-11-20 14:19:58.719 DEBUG 15876 --- [http-nio-8080-exec-3] c.b.h.logging.ApplicationLoggerAspect    : 
+ 
+ 
+ 
+2020-11-20 14:19:58.720 DEBUG 15876 --- [http-nio-8080-exec-3] c.b.h.logging.ApplicationLoggerAspect    : ***************** BEFORE METHOD EXECUTION**************** 
+ com.bzbees.hrma.controllers.UserController.showProfileImg () with arguments[s] = [2]
+2020-11-20 14:19:58.720 DEBUG 15876 --- [http-nio-8080-exec-3] c.b.h.logging.ApplicationLoggerAspect    : __________________________________________________________ 
+ 
+ 
+2020-11-20 14:20:21.149 DEBUG 15876 --- [http-nio-8080-exec-8] c.b.h.logging.ApplicationLoggerAspect    : 
+ 
+ 
+ 
+2020-11-20 14:20:21.150 DEBUG 15876 --- [http-nio-8080-exec-8] c.b.h.logging.ApplicationLoggerAspect    : ***************** BEFORE METHOD EXECUTION**************** 
+ com.bzbees.hrma.controllers.UserController.displayHomePage () with arguments[s] = [org.springframework.web.bind.support.SimpleSessionStatus@53ce1f58]
+2020-11-20 14:20:21.150 DEBUG 15876 --- [http-nio-8080-exec-8] c.b.h.logging.ApplicationLoggerAspect    : __________________________________________________________ 
+ 
+ 
+2020-11-20 14:20:21.158 DEBUG 15876 --- [http-nio-8080-exec-1] c.b.h.logging.ApplicationLoggerAspect    : 
+ 
+ 
+ 
+2020-11-20 14:20:21.158 DEBUG 15876 --- [http-nio-8080-exec-1] c.b.h.logging.ApplicationLoggerAspect    : ***************** BEFORE METHOD EXECUTION**************** 
+ com.bzbees.hrma.controllers.HomeController.displayHome () with arguments[s] = [{localVerNumber=locale - 0.0.2.0}]
+2020-11-20 14:20:21.158 DEBUG 15876 --- [http-nio-8080-exec-1] c.b.h.logging.ApplicationLoggerAspect    : __________________________________________________________ 
+ 
+ 
+2020-11-20 14:20:35.477  INFO 15876 --- [Thread-23] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-20 14:20:35.478  INFO 15876 --- [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 14:20:35.609  INFO 15876 --- [restartedMain] com.bzbees.hrma.BzBees1Application       : Starting BzBees1Application on DESKTOP-626N0R4 with PID 15876 (C:\Users\rober\git\HRMA\BZBees-2\target\classes started by rober in C:\Users\rober\git\HRMA\BZBees-2)
+2020-11-20 14:20:35.609 DEBUG 15876 --- [restartedMain] com.bzbees.hrma.BzBees1Application       : Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2020-11-20 14:20:35.609  INFO 15876 --- [restartedMain] com.bzbees.hrma.BzBees1Application       : The following profiles are active: dev
+2020-11-20 14:20:35.941  INFO 15876 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-20 14:20:35.964  INFO 15876 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22ms. Found 7 JPA repository interfaces.
+2020-11-20 14:20:36.102  INFO 15876 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-20 14:20:36.126  INFO 15876 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 514 ms
+2020-11-20 14:20:36.319  INFO 15876 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://176.223.122.51:3306/bpeople_BZBees'
+2020-11-20 14:20:36.400  WARN 15876 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Cannot deserialize session attribute [org.springframework.web.servlet.support.SessionFlashMapManager.FLASH_MAPS] for session [383BFEF35CB7B62A7D5203C4B7B087F3]
+2020-11-20 14:20:36.521  INFO 15876 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 14:20:36.740  WARN 15876 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-20 14:20:36.769  INFO 15876 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-20 14:20:36.927  INFO 15876 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-20 14:20:36.930  INFO 15876 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-11-20 14:20:36.952  INFO 15876 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-20 14:20:36.952  INFO 15876 --- [restartedMain] com.bzbees.hrma.BzBees1Application       : Started BzBees1Application in 1.371 seconds (JVM running for 2316.682)
+2020-11-20 14:20:36.955  INFO 15876 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
