@@ -28,9 +28,10 @@ public class Skill {
 	private long skillId;
 	
 
-
+	@Column(name="skill_name")
 	private String skillName;
 	
+	@Column(name="skill_description")
 	private String skillDescription;
 	
 

@@ -1,5 +1,6 @@
 package com.bzbees.hrma.entities;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -37,13 +38,14 @@ public class User {
 	
 	@ManyToMany
 	@JoinTable(name="user_role",
-			joinColumns=@JoinColumn(name="role_id"),
-			inverseJoinColumns=@JoinColumn(name="user_id"))
-	private List<UserRole> roles;
+			joinColumns=@JoinColumn(name="user_id"),
+			inverseJoinColumns=@JoinColumn(name="role_id"))
+	private List<UserRole> roles = new ArrayList<UserRole>();
 	
 	@OneToOne(fetch = FetchType.LAZY, cascade= {CascadeType.MERGE, CascadeType.REFRESH, CascadeType.PERSIST},optional = false)
-	@JoinColumn(name = "person_id", referencedColumnName="personId", nullable = false )
+	@JoinColumn(name = "person_id", referencedColumnName="person_id", nullable = false )
 	private Person person;
+	
 	
 	
 
@@ -51,13 +53,13 @@ public class User {
 		
 	}
 
-	public User(String userName, String email, String password, boolean active) {
+	public User(String userName, String email, String password, boolean active, List<UserRole> roles) {
 		super();
 		this.userName = userName;
 		this.email = email;
 		this.password = password;
 		this.active = active;
-//		this.roles = roles;
+		this.roles = roles;
 	}
 	
 //	public User(String userId, boolean active, String email, String password)
@@ -75,9 +77,9 @@ public class User {
 		return userId;
 	}
 
-	public void setUserId(long userId) {
-		this.userId = userId;
-	}
+//	public void setUserId(long userId) {
+//		this.userId = userId;
+//	}
 
 	public String getUserName() {
 		return userName;
@@ -117,6 +119,11 @@ public class User {
 
 	public void setRoles(List<UserRole> roles) {
 		this.roles = roles;
+	}
+	
+	public User addRole(UserRole role) {
+		this.roles.add(role);
+		return this;
 	}
 	
 	

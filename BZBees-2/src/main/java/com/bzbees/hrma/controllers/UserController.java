@@ -2,11 +2,9 @@ package com.bzbees.hrma.controllers;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.EntityManager;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,18 +36,20 @@ import com.bzbees.hrma.entities.Person;
 import com.bzbees.hrma.entities.ProfileImg;
 import com.bzbees.hrma.entities.Skill;
 import com.bzbees.hrma.entities.User;
+import com.bzbees.hrma.entities.UserRole;
 import com.bzbees.hrma.services.DocService;
 import com.bzbees.hrma.services.JobService;
 import com.bzbees.hrma.services.LanguageService;
 import com.bzbees.hrma.services.PersonService;
 import com.bzbees.hrma.services.ProfileImgService;
 import com.bzbees.hrma.services.ProfileToPDF;
+import com.bzbees.hrma.services.RoleService;
 import com.bzbees.hrma.services.SkillService;
 import com.bzbees.hrma.services.UserService;
 
 
 @Controller
-@SessionAttributes({ "person", "skillsList", "langList", "jobList", "docList", "picList", "lastPicList" })
+@SessionAttributes({ "person", "userAccount", "skillsList", "langList", "jobList", "docList", "picList", "lastPicList" })
 @RequestMapping("/user")
 public class UserController {
 
@@ -57,7 +57,7 @@ public class UserController {
 	PersonService persServ;
 
 	@Autowired
-	UserService userAccountServ;
+	UserService userServ;
 
 	@Autowired
 	SkillService skillServ;
@@ -73,6 +73,9 @@ public class UserController {
 
 	@Autowired
 	ProfileImgService profileImgServ;
+	
+	@Autowired
+	RoleService roleServ;
 
 	@GetMapping
 	public String displayRegisterForm(Model model) {
@@ -97,30 +100,48 @@ public class UserController {
 			RedirectAttributes redirAttr) {
 
 		System.out.println("person is " + person.getLastName());
+				
+	
+				if (person.getLastName() != null) {
 
-		if (person.getLastName() != null) {
+					person.setAppStatus(1);
 
-			person.setAppStatus(1);
+					if (persServ.checkAvailability(person) && persServ.checkBirthDate(person)) {
+						
+						System.out.println("Persons are : " + persServ.getAll().toString());
+						
+						
+						//used to avoid detach exception 
+						if(!persServ.getAll().contains(persServ.findPersonById(person.getPersonId()))) {
+							
+							UserRole role1 = new UserRole("USER");
+							UserRole role2 = new UserRole("CANDIDATE");
+							roleServ.saveRole(role1);
+							roleServ.saveRole(role2);
+							userAccount.addRole(role1);
+							userAccount.addRole(role2);
+							
+							userAccount.setPerson(person);
+							persServ.save(person);
+							userServ.save(userAccount);							
+						}
+						
 
-			if (persServ.checkAvailability(person) && persServ.checkBirthDate(person)) {
+					} else {
+						System.out.println("Invalid dates baby");
+						skillServ.deleteAll();
+						return "user/register" + person;
+					}
 
-				userAccount.setPerson(person);
-				persServ.save(person);
-				userAccountServ.save(userAccount);
-				userAccountServ.save(userAccount).setActive(true);
-
-			} else {
-				System.out.println("Invalid dates baby");
-				skillServ.deleteAll();
-				return "user/register" + person;
-			}
-
-		}
+				}
 		
-		int usersNo = userAccountServ.getAll().size();
-		System.out.println("NUmber of users " + " " + "is "+ usersNo);
+		int usersNo = userServ.getAll().size();
+		System.out.println("Number of users " + " " + "is "+ usersNo);
 
 		System.out.println("Hitting the save from user/save POST ");
+		
+		redirAttr.addFlashAttribute("person", person);
+		redirAttr.addFlashAttribute("userAccount", userAccount);
 
 
 		return "redirect:/user/skills";
@@ -968,6 +989,9 @@ public class UserController {
 	
 	@PostMapping("/finishAccount")
 	public String displayHomePage(SessionStatus status) {
+		
+
+		
 		status.setComplete();
 		return "redirect:/";
 	}

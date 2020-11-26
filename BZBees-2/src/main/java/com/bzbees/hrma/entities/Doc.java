@@ -28,9 +28,13 @@ public class Doc {
 	@Column(name="doc_id")
 	private long docId;
 	
+	@Column(name="doc_name")
 	private String docName;
+	
+	@Column(name="doc_type")
 	private String docType;
 	
+	@Column(name="doc_private")
 	private boolean docPrivate = false;
 	
 

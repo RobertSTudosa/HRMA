@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -26,17 +27,23 @@ public class Job {
 	@Id()
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "job_generator")
 	@SequenceGenerator(name = "job_generator", sequenceName = "job_seq", allocationSize = 1)
+	@Column(name="job_id")
 	private long jobId;
 	
+	@Column(name="job_title")
 	private String jobTitle;
-
+	
+	@Column(name="company_name")
 	private String companyName;
-
+	
+	@Column(name="job_location")
 	private String jobLocation;
-
+	
+	@Column(name="start_date")
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date startDate;
-
+	
+	@Column(name="end_date")
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date endDate;
 
@@ -46,9 +53,11 @@ public class Job {
 	
 	@Size(min=2, max=4000)
 	private String responsabilities;
-
+	
+	@Column(name="working_conditions")
 	private String workingConditions;
 	
+	@Column(name="job_private")
 	private boolean jobPrivate=false;
 
 
@@ -56,7 +65,8 @@ public class Job {
 	private String skills;
 
 	private String tags;
-
+	
+	@Column(name="necessary_documents")
 	private String necessaryDocuments;
 	
 	

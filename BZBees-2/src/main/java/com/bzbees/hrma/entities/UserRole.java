@@ -27,8 +27,8 @@ public class UserRole {
 	
 	@ManyToMany
 	@JoinTable(name="user_role",
-			joinColumns=@JoinColumn(name="user_id"),
-			inverseJoinColumns=@JoinColumn(name="role_id"))
+			joinColumns=@JoinColumn(name="role_id"),
+			inverseJoinColumns=@JoinColumn(name="user_id"))
 	private List<User> users;
 	
 	
@@ -37,10 +37,10 @@ public class UserRole {
 	}
 
 
-	public UserRole(String permission, List<User> users) {
+	public UserRole(String permission) {
 		super();
 		this.permission = permission;
-		this.users = users;
+//		this.users = users;
 	}
 
 
@@ -62,6 +62,8 @@ public class UserRole {
 	public void setUsers(List<User> users) {
 		this.users = users;
 	}
+	
+	
 	
 	
 

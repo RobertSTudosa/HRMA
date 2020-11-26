@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -27,6 +28,7 @@ public class Person {
 	@Id()
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "person_generator")
 	@SequenceGenerator(name = "person_generator", sequenceName = "person_seq", allocationSize = 1)
+	@Column(name="person_id")
 	private long personId;
 
 	private String firstName;
@@ -158,9 +160,9 @@ public class Person {
 		return personId;
 	}
 
-	public void setPersonId(long personId) {
-		this.personId = personId;
-	}
+//	public void setPersonId(long personId) {
+//		this.personId = personId;
+//	}
 
 	public String getFirstName() {
 		return firstName;
